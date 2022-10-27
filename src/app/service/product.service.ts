@@ -43,4 +43,25 @@ export class ProductService {
   save(product: Product) {
     this.products.push(product);
   }
+
+  find(id: string | any) {
+    return this.products.find(pr => pr.id === id);
+  }
+
+  update(id: string, product: Product) {
+    for (let i = 0; i < this.products.length; i++) {
+      if (this.products[i].id === id) {
+        this.products[i] = product;
+        break;
+      }
+    }
+  }
+
+  remove(id: string) {
+    for (let i = 0; i < this.products.length; i++) {
+      if (this.products[i].id === id) {
+        this.products.splice(i, 1);
+      }
+    }
+  }
 }

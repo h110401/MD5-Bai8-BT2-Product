@@ -1,0 +1,14 @@
+<p>product-update works!</p>
+<p>{{product | json}}</p>
+<p>{{productForm.value | json}}</p>
+<form [formGroup]="productForm" (submit)="submit()">
+  ID:<br>
+  <input type="text" formControlName="id"><br>
+  Name:<br>
+  <input type="text" formControlName="name"><br>
+  Number:<br>
+  <input type="number" formControlName="price"><br>
+  Description:<br>
+  <input type="text" formControlName="description"><br><br>
+  <button>Update</button>
+</form>

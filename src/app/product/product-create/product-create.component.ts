@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FormBuilder, FormGroup} from "@angular/forms";
 import {ProductService} from "../../service/product.service";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-product-create',
@@ -12,7 +13,8 @@ export class ProductCreateComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private productService: ProductService
+    private productService: ProductService,
+    private router: Router
   ) {
   }
 
@@ -29,5 +31,6 @@ export class ProductCreateComponent implements OnInit {
     const product = this.productForm.value;
     this.productService.save(product);
     this.productForm.reset();
+    this.router.navigate(['product/list']);
   }
 }
