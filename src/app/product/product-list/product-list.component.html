@@ -1,3 +1,5 @@
+<a routerLink="/product/create">Tạo mới sản phẩm</a>
+
 <h1>Danh sách sản phẩm</h1>
 <table class="table table-bordered">
   <tr>
@@ -6,6 +8,7 @@
     <td>Tên</td>
     <td>Giá</td>
     <td>Mô tả</td>
+    <td>Thể loại</td>
     <td>Sửa</td>
     <td>Xoá</td>
   </tr>
@@ -15,6 +18,7 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
+    <td>{{product.category?.name}}</td>
     <td><a [routerLink]="['/product/edit', product.id]">Sửa</a></td>
     <td><a [routerLink]="['/product/delete', product.id]">Xoá</a></td>
   </tr>

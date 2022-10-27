@@ -1,4 +1,5 @@
 <h1>Tạo sản phẩm mới</h1>
+{{productForm.value | json}}
 <form [formGroup]="productForm" (ngSubmit)="submit()">
   <table>
     <tr>
@@ -18,8 +19,19 @@
       <td><input type="text" formControlName="description"></td>
     </tr>
     <tr>
+      <td>Thể loại sản phẩm</td>
+      <td><select formControlName="category">
+        <option *ngFor="let cate of allCategory, index as i"
+                [ngValue]="cate"
+        >{{cate.name}}
+        </option>
+      </select></td>
+    </tr>
+    <tr>
       <td></td>
-      <td><button>Tạo mới</button></td>
+      <td>
+        <button>Tạo mới</button>
+      </td>
     </tr>
   </table>
 </form>

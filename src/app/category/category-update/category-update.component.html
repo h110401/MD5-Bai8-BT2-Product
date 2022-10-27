@@ -1,0 +1,8 @@
+<h2>Edit category</h2>
+<form [formGroup]="categoryForm" (submit)="submit()">
+  ID:<br>
+  <input type="text" formControlName="id"><br>
+  Name:<br>
+  <input type="text" formControlName="name"><br><br>
+  <button>Edit</button>
+</form>

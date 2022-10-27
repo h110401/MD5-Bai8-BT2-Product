@@ -9,6 +9,11 @@
   Number:<br>
   <input type="number" formControlName="price"><br>
   Description:<br>
-  <input type="text" formControlName="description"><br><br>
+  <input type="text" formControlName="description"><br>
+  Category:<br>
+  <select formControlName="category">
+    <option *ngFor="let cate of allCate" [ngValue]="cate">{{cate.name}}</option>
+  </select>
+  <br>
   <button>Update</button>
 </form>

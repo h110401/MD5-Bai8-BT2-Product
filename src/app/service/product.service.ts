@@ -10,27 +10,47 @@ export class ProductService {
     id: 'UUID1',
     name: 'IPhone 12',
     price: 2400000,
-    description: 'New'
+    description: 'New',
+    category: {
+      id: 'C1',
+      name: 'IPhone'
+    }
   }, {
     id: 'UUID2',
     name: 'IPhone 11',
     price: 1560000,
-    description: 'Like new'
+    description: 'Like new',
+    category: {
+      id: 'C1',
+      name: 'IPhone'
+    }
   }, {
     id: 'UUID3',
     name: 'IPhone X',
     price: 968000,
-    description: '97%'
+    description: '97%',
+    category: {
+      id: 'C1',
+      name: 'IPhone'
+    }
   }, {
     id: 'UUID4',
     name: 'IPhone 8',
     price: 7540000,
-    description: '98%'
+    description: '98%',
+    category: {
+      id: 'C1',
+      name: 'IPhone'
+    }
   }, {
     id: 'UUID5',
     name: 'IPhone 11 Pro',
     price: 1895000,
-    description: 'Like new'
+    description: 'Like new',
+    category: {
+      id: 'C1',
+      name: 'IPhone'
+    }
   }];
 
   constructor() {
